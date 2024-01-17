@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  monarchdb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  thekings.api:
+    image: ${DOCKER_REGISTRY-}thekingsapi
+    build:
+      context: .
+      dockerfile: TheKings.API/Dockerfile

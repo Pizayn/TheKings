@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+
+  monarchdb:
+    container_name: monarchdb
+    environment:
+        SA_PASSWORD: "SwN12345678"
+        ACCEPT_EULA: "Y"
+    restart: always
+    ports:
+        - "1433:1433"
+  thekings.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:MonarchConnectionString=Server=monarchdb;Database=MonarchDb;"
+    depends_on:
+       - monarchdb
+    ports:
+       - "8000:80"

@@ -19,7 +19,7 @@ TheKings is a C#/.NET Core Console Application designed to fetch and analyze dat
 * Data Fetching: The application fetches a list of English monarchs from an online source, ensuring up-to-date information.
 * Data Analysis: Utilizes LINQ queries to produce statistics about the monarchs, such as the number of monarchs, the longest-reigning monarch, the house that ruled the longest, and the most common first name among the monarchs.
 * Local Data Representation: Converts the fetched data into a local format for ease of manipulation and analysis.
-* 
+  
 ####  Technical Details
 * Data Source: The monarch data is sourced from a publicly available gist.
 * Data Storage: Upon initialization, the application loads the data into a SQL database, leveraging Entity Framework ORM for efficient data handling.
@@ -29,8 +29,8 @@ TheKings is a C#/.NET Core Console Application designed to fetch and analyze dat
 TheKings.API provides endpoints from which TheKings console application retrieves the required data. After fetching the data from the API, the application performs various statistical analyses and displays the results in the console.
 
 #### Project Structure
-TheKings.API: Handles data provision through RESTful endpoints.
-TheKings.ConsoleApp: The main console application responsible for data retrieval and processing.
+* TheKings.API: Handles data provision through RESTful endpoints.
+* TheKings.ConsoleApp: The main console application responsible for data retrieval and processing.
 
 #### Getting Started
 To run TheKings, simply clone the repository, ensure you have .NET Core installed, and execute the console application. The API should be running to fetch the data successfully.
